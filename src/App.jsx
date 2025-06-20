@@ -15,7 +15,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:4000/api/users', formData);
+      const res = await axios.post('https://node-mongo-atlas-backend.onrender.com/api/users', formData);
       setMessage(res.data.message);
     } catch (error) {
       setMessage('Error saving data');
